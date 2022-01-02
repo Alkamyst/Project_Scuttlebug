@@ -9,13 +9,13 @@
 // The distance from Mario which coin formations spawn coins at.
 // Vanilla is 2000.0f. 
 // Set this to o->oDrawingDistance for a more reasonable range at the cost of performance.
-#define COIN_FORMATION_DISTANCE 2000.0f
+#define COIN_FORMATION_DISTANCE 3000.0f
 
 // Moving Coins flicker and disappear when they hit lava instead of being instantly deleted.
 #define COIN_LAVA_FLICKER
 
 // Allow for retries on collecting the remaining blue coins from a blue coin switch.
-//#define BLUE_COIN_SWITCH_RETRY
+#define BLUE_COIN_SWITCH_RETRY
 
 // -- GOOMBA --
 
@@ -24,7 +24,7 @@
 
 // Floombas! These fellas sport custom behaviors (bhvFloomba, bhvFloombaTripletSpawner) and of course the iconic Floomba texture.
 // Also support macros (macro_floomba, macro_huge_floomba, macro_tiny_floomba, macro_floomba_triplet_spawner, macro_floomba_quintuplet_spawner).
-#define FLOOMBAS
+// #define FLOOMBAS
 
 // -- HOOT --
 
@@ -37,12 +37,12 @@
 // -- MR I --
 
 // Uncomment to allow MR I to shoot his particle in any direction 
-// #define MR_I_PITCH_SHOOTING
+#define MR_I_PITCH_SHOOTING
 
 // -- WATER RING --
 
 // Fix DDD water rings by checking for interaction rather than normals.
-// #define FIX_WATER_RINGS
+#define FIX_WATER_RINGS
 
 // -- POWER STAR --
 
