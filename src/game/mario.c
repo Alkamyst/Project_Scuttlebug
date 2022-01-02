@@ -249,6 +249,9 @@ void play_mario_jump_sound(struct MarioState *m) {
         if (m->action == ACT_TRIPLE_JUMP) {
             play_sound(SOUND_MARIO_YAHOO_WAHA_YIPPEE + ((gAudioRandom % 5) << 16),
                        m->marioObj->header.gfx.cameraToObject);
+        } else if (m->action == ACT_GROUNDPOUND_JUMP) {
+            play_sound(SOUND_MARIO_YAHOO_WAHA_YIPPEE + ((gAudioRandom % 5) << 16),
+                       m->marioObj->header.gfx.cameraToObject);
         } else {
             play_sound(SOUND_MARIO_YAH_WAH_HOO + ((gAudioRandom % 3) << 16),
                        m->marioObj->header.gfx.cameraToObject);
@@ -841,6 +844,11 @@ u32 set_mario_action_airborne(struct MarioState *m, u32 action, u32 actionArg) {
 
         case ACT_JUMP_KICK:
             m->vel[1] = 20.0f;
+            break;
+
+        case ACT_GROUNDPOUND_JUMP:
+            set_mario_y_vel_based_on_fspeed(m, 62.0f, 0.0f);
+            m->forwardVel *= 0.8f;
             break;
     }
 

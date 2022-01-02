@@ -511,6 +511,26 @@ s32 act_triple_jump(struct MarioState *m) {
     return FALSE;
 }
 
+s32 act_groundpound_jump(struct MarioState *m) {
+    if (m->input & INPUT_B_PRESSED) {
+        return set_mario_action(m, ACT_DIVE, 0);
+    }
+
+    if (m->input & INPUT_Z_PRESSED) {
+        return set_mario_action(m, ACT_GROUND_POUND, 0);
+    }
+
+    play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
+    common_air_action_step(m, ACT_TRIPLE_JUMP_LAND, MARIO_ANIM_TRIPLE_JUMP, 0);
+#if ENABLE_RUMBLE
+    if (m->action == ACT_TRIPLE_JUMP_LAND) {
+        queue_rumble_data(5, 40);
+    }
+#endif
+    play_flip_sounds(m, 2, 8, 20);
+    return FALSE;
+}
+
 s32 act_backflip(struct MarioState *m) {
     if (m->input & INPUT_Z_PRESSED) {
         return set_mario_action(m, ACT_GROUND_POUND, 0);
@@ -922,6 +942,13 @@ s32 act_steep_jump(struct MarioState *m) {
 }
 
 s32 act_ground_pound(struct MarioState *m) {
+
+    if (m->input & INPUT_B_PRESSED) {
+        m->vel[1] = 15.0f;
+        mario_set_forward_vel(m, 150.0f);
+        return set_mario_action(m, ACT_DIVE, 0);
+    }
+
     u32 stepResult;
     f32 yOffset;
 
@@ -2076,6 +2103,7 @@ s32 mario_execute_airborne_action(struct MarioState *m) {
         case ACT_RIDING_HOOT:          cancel = act_riding_hoot(m);          break;
         case ACT_TOP_OF_POLE_JUMP:     cancel = act_top_of_pole_jump(m);     break;
         case ACT_VERTICAL_WIND:        cancel = act_vertical_wind(m);        break;
+        case ACT_GROUNDPOUND_JUMP:     cancel = act_groundpound_jump(m);     break;
     }
     /* clang-format on */
 
