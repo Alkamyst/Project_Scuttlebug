@@ -393,9 +393,10 @@ u32 common_air_action_step(struct MarioState *m, u32 landAction, s32 animation, 
                 mario_bonk_reflection(m, FALSE);
                 m->faceAngle[1] += 0x8000;
 
-                if (m->wall != NULL) {
+                if ((m->wall != NULL) && (m->wall->type != SURFACE_NO_WALLKICK)) {
                     set_mario_action(m, ACT_AIR_HIT_WALL, 0);
                 } else {
+                    play_sound(SOUND_GENERAL_POUND_ROCK, m->marioObj->header.gfx.cameraToObject); 
                     if (m->vel[1] > 0.0f) {
                         m->vel[1] = 0.0f;
                     }
@@ -1173,6 +1174,7 @@ u32 common_air_knockback_step(struct MarioState *m, u32 landAction, u32 hardFall
 }
 
 s32 check_wall_kick(struct MarioState *m) {
+
     if ((m->input & INPUT_A_PRESSED) && m->wallKickTimer != 0 && m->prevAction == ACT_AIR_HIT_WALL) {
         m->faceAngle[1] += 0x8000;
         return set_mario_action(m, ACT_WALL_KICK_AIR, 0);
@@ -1317,9 +1319,9 @@ s32 act_air_hit_wall(struct MarioState *m) {
 
     if (++(m->actionTimer) <= FIRSTY_LAST_FRAME) {
         if (m->input & INPUT_A_PRESSED) {
-            m->vel[1] = 52.0f;
-            m->faceAngle[1] += 0x8000;
-            return set_mario_action(m, ACT_WALL_KICK_AIR, 0);
+                m->vel[1] = 52.0f;
+                m->faceAngle[1] += 0x8000;
+                return set_mario_action(m, ACT_WALL_KICK_AIR, 0);
         }
     } else if (m->forwardVel >= 38.0f) {
         m->wallKickTimer = 5;
