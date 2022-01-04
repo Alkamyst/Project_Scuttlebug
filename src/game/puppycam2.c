@@ -91,8 +91,8 @@ static const struct gPCOptionStruct gPCOptions[] = { //If the min and max are 0 
 #endif
     {/*Option Name*/ 0, /*Option Variable*/ &gPuppyCam.options.analogue,       /*Option Value Text Start*/ 0, /*Option Minimum*/ FALSE, /*Option Maximum*/ TRUE},
     {/*Option Name*/ 6, /*Option Variable*/ &gPuppyCam.options.inputType,       /*Option Value Text Start*/ 2, /*Option Minimum*/ 0, /*Option Maximum*/ 2},
-    {/*Option Name*/ 1, /*Option Variable*/ &gPuppyCam.options.sensitivityX,   /*Option Value Text Start*/ 255, /*Option Minimum*/ 10, /*Option Maximum*/ 500},
-    {/*Option Name*/ 2, /*Option Variable*/ &gPuppyCam.options.sensitivityY,   /*Option Value Text Start*/ 255, /*Option Minimum*/ 10, /*Option Maximum*/ 500},
+    {/*Option Name*/ 1, /*Option Variable*/ &gPuppyCam.options.sensitivityX,   /*Option Value Text Start*/ 255, /*Option Minimum*/ 10, /*Option Maximum*/ 200},
+    {/*Option Name*/ 2, /*Option Variable*/ &gPuppyCam.options.sensitivityY,   /*Option Value Text Start*/ 255, /*Option Minimum*/ 10, /*Option Maximum*/ 200},
     {/*Option Name*/ 3, /*Option Variable*/ &gPuppyCam.options.invertX,        /*Option Value Text Start*/ 0, /*Option Minimum*/ FALSE, /*Option Maximum*/ TRUE},
     {/*Option Name*/ 4, /*Option Variable*/ &gPuppyCam.options.invertY,        /*Option Value Text Start*/ 0, /*Option Minimum*/ FALSE, /*Option Maximum*/ TRUE},
     {/*Option Name*/ 5, /*Option Variable*/ &gPuppyCam.options.turnAggression, /*Option Value Text Start*/ 255, /*Option Minimum*/ 0, /*Option Maximum*/ 100},
@@ -134,14 +134,14 @@ void puppycam_default_config(void) {
     gPuppyCam.options.sensitivityY   = 100;
     gPuppyCam.options.turnAggression = 50;
     gPuppyCam.options.analogue       = 0;
-    gPuppyCam.options.inputType      = 1;
+    gPuppyCam.options.inputType      = 0;
 }
 
 // Initial setup. Ran at the beginning of the game and never again.
 void puppycam_boot(void) {
-    gPuppyCam.zoomPoints[0] = 600;
-    gPuppyCam.zoomPoints[1] = 1000;
-    gPuppyCam.zoomPoints[2] = 1500;
+    gPuppyCam.zoomPoints[0] = 1000;
+    gPuppyCam.zoomPoints[1] = 1500;
+    gPuppyCam.zoomPoints[2] = 2000;
     gPuppyCam.povHeight     = 125;
     gPuppyCam.stick2[0]     = 0;
     gPuppyCam.stick2[1]     = 0;
