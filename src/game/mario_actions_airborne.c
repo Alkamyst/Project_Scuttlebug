@@ -945,7 +945,7 @@ s32 act_steep_jump(struct MarioState *m) {
 s32 act_ground_pound(struct MarioState *m) {
 
     if (m->input & INPUT_B_PRESSED) {
-        m->vel[1] = 15.0f;
+        m->vel[1] = 5.0f;
         mario_set_forward_vel(m, 150.0f);
         return set_mario_action(m, ACT_DIVE, 0);
     }
