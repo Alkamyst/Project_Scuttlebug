@@ -604,7 +604,10 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
 
             case 80:
                 if (!(m->actionArg & 1)) {
-                    level_trigger_warp(m, WARP_OP_STAR_EXIT);
+                    // Creates a dialog box before pulling Mario out of the level
+                    enable_time_stop();
+                    create_dialog_box(DIALOG_170);
+                    m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
                 } else {
                     enable_time_stop();
                     create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
@@ -612,11 +615,15 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                 }
                 break;
         }
-    } else if (m->actionState == ACT_STATE_STAR_DANCE_DO_SAVE && gDialogResponse != DIALOG_RESPONSE_NONE) {
+    } else if (m->actionState == ACT_STATE_STAR_DANCE_DO_SAVE && gDialogResponse != DIALOG_RESPONSE_NONE && get_dialog_id() != DIALOG_170) {
         if (gDialogResponse == DIALOG_RESPONSE_YES) {
             save_file_do_save(gCurrSaveFileNum - 1);
         }
         m->actionState = ACT_STATE_STAR_DANCE_RETURN;
+    } else if (m->actionState == ACT_STATE_STAR_DANCE_DO_SAVE && gDialogResponse != DIALOG_RESPONSE_NONE && get_dialog_id() == DIALOG_170) {
+        // Pulls Mario out of the level
+        disable_time_stop();
+        level_trigger_warp(m, WARP_OP_STAR_EXIT);
     } else if (m->actionState == ACT_STATE_STAR_DANCE_RETURN && is_anim_at_end(m)) {
         disable_time_stop();
         enable_background_sound();

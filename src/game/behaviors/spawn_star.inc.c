@@ -25,6 +25,10 @@ void bhv_collect_star_init(void) {
     } else {
         o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_STAR];
     }
+    // If BPARAM2 is 1 then the star does not kick Mario out of the level
+    if ((o->oBehParams2ndByte == 1)) {
+        o->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
+    }
 
     obj_set_hitbox(o, &sCollectStarHitbox);
 }

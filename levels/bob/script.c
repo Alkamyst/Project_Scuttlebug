@@ -48,8 +48,9 @@ const LevelScript level_bob_entry[] = {
 
 	AREA(1, bob_area_1),
 		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(0xF0, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
+		WARP_NODE(0xF0, LEVEL_BOB, 0x01, 0x32, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF1, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
+		WARP_NODE(0x32, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_EXCLAMATION_BOX, -2622, 439, -7669, 0, -160, 0, 0x00050000, bhvExclamationBox),
 		OBJECT(MODEL_NONE, 2, 264, -956, 0, 0, 0, 0x00020000, bhvCoinFormation),
 		OBJECT(MODEL_NONE, -744, 515, -6222, 0, 0, 0, 0x00110000, bhvCoinFormation),
@@ -72,6 +73,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_STAR, -2672, 2701, -3429, 0, 0, 0, 0x01000000, bhvStar),
 		OBJECT(MODEL_NONE, -800, 403, 1455, 0, 162, 0, 0x000A0000, bhvSpinAirborneWarp),
 		MARIO_POS(0x01, 162, -800, 203, 1455),
+		OBJECT(MODEL_NONE, 5, 744, -959, 0, -180, 0, 0x00320000, bhvAirborneStarCollectWarp),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x23, SEQ_SPM_FLORO_CAVERNS),
