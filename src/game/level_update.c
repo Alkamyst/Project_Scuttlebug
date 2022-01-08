@@ -709,7 +709,7 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 sDelayedWarpTimer = 32;
                 sSourceWarpNodeId = WARP_NODE_DEFAULT;
                 gSavedCourseNum = COURSE_NONE;
-                play_transition(WARP_TRANSITION_FADE_INTO_COLOR, sDelayedWarpTimer, 255, 255, 255);
+                play_transition(WARP_TRANSITION_FADE_INTO_COLOR, 0x10, 255, 255, 255);
                 break;
 
             case WARP_OP_DEATH:
@@ -1302,7 +1302,12 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
-	if (gCurrLevelNum == LEVEL_BOB) return 0;
+    // Removes Act Selector from BOB and resets coin values on enter
+	if (gCurrLevelNum == LEVEL_BOB) {
+        gMarioState->numCoins = 0;
+        gHudDisplay.coins = 0;
+        return 0;
+    }
 
     if (gCurrDemoInput != NULL || gCurrCreditsEntry != NULL || gCurrCourseNum == COURSE_NONE) {
         return FALSE;
