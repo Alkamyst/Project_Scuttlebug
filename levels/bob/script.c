@@ -73,7 +73,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_STAR, -2672, 2701, -3429, 0, 0, 0, 0x01000000, bhvStar),
 		OBJECT(MODEL_NONE, -800, 403, 1455, 0, 162, 0, 0x000A0000, bhvSpinAirborneWarp),
 		MARIO_POS(0x01, 162, -800, 203, 1455),
-		OBJECT(MODEL_NONE, 5, 744, -959, 0, -180, 0, 0x00000000, bhvAirborneStarCollectWarp),
+		OBJECT(MODEL_NONE, 5, 744, -959, 0, -180, 0, 0x00320000, bhvAirborneStarCollectWarp),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x23, SEQ_SPM_FLORO_CAVERNS),
