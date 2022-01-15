@@ -25,8 +25,9 @@ void bhv_collect_star_init(void) {
     } else {
         o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_STAR];
     }
-    // If BPARAM2 is 1 then the star does not kick Mario out of the level
-    if ((o->oBehParams2ndByte == 1)) {
+    // If BPARAM3 is 1 then the star does not kick Mario out of the level
+    s8 starKickout = GET_BPARAM3(o->oBehParams);
+    if ((starKickout == 1)) {
         o->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
     }
 
@@ -182,6 +183,36 @@ void bhv_hidden_red_coin_star_loop(void) {
             break;
 
         case HIDDEN_STAR_ACT_ACTIVE:
+            if (o->oTimer > 2) {
+                spawn_red_coin_cutscene_star(o->oPosX, o->oPosY, o->oPosZ);
+                spawn_mist_particles();
+                o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+            }
+            break;
+    }
+}
+
+void bhv_hidden_paragoomba_star_init(void) {
+    s16 numParagoombasRemaining = count_objects_with_behavior(bhvParagoomba);
+    if (numParagoombasRemaining == 0) {
+        struct Object *starObj = spawn_object_abs_with_rot(o, 0, MODEL_STAR, bhvStar, o->oPosX, o->oPosY, o->oPosZ, 0, 0, 0);
+        starObj->oBehParams = o->oBehParams;
+        o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+    }
+
+    o->oHiddenStarTriggerCounter = 5 - numParagoombasRemaining;
+}
+
+void bhv_hidden_paragoomba_star_loop(void) {
+
+    switch (o->oAction) {
+        case 0:
+            if (o->oHiddenStarTriggerCounter == 5) {
+                o->oAction = 1;
+            }
+            break;
+
+        case 1:
             if (o->oTimer > 2) {
                 spawn_red_coin_cutscene_star(o->oPosX, o->oPosY, o->oPosZ);
                 spawn_mist_particles();

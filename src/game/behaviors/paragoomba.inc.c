@@ -159,6 +159,21 @@ void bhv_paragoomba_update(void) {
         }
 
         cur_obj_move_standard(78);
-        obj_check_attacks(&sParaGoombaHitbox, o->oAction);
+        // Checks if the paragoomba is killed. If so, adds 1 to the paragoomba star.
+        if (obj_check_attacks(&sParaGoombaHitbox, o->oAction)) {
+            if (--o->oHealth < 0) {
+                struct Object *hiddenParagoombaStar = cur_obj_nearest_object_with_behavior(bhvHiddenParagoombaStar);
+
+                if (hiddenParagoombaStar != NULL) {
+                    hiddenParagoombaStar->oHiddenStarTriggerCounter++;
+
+                    if (hiddenParagoombaStar->oHiddenStarTriggerCounter != 5) {
+                        spawn_orange_number(hiddenParagoombaStar->oHiddenStarTriggerCounter, 0, 0, 0);
+                    }
+
+                    play_sound(SOUND_MENU_COLLECT_RED_COIN + (((u8) hiddenParagoombaStar->oHiddenStarTriggerCounter - 1) << 16), gGlobalSoundSource);
+                }
+            }
+        }
     }
 }
