@@ -15,3 +15,4 @@
 #include "chain_ball/geo.inc.c"
 #include "chain_chomp/geo.inc.c"
 #include "scuttlebug/geo.inc.c"
+#include "paragoomba/geo.inc.c"

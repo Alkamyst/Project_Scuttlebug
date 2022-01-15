@@ -412,6 +412,7 @@
 #define MODEL_CHAIN_CHOMP                 0x66        // chain_chomp
 #define MODEL_KOOPA_FLAG                  0x6A        // koopa_flag_geo
 #define MODEL_WOODEN_POST                 0x6B        // wooden_post_geo
+#define MODEL_PARAGOOMBA                  0x6C        // paragoomba_geo
 
 // group 15
 #define MODEL_MIPS                        0x64        // mips_geo

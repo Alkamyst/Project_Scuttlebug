@@ -160,4 +160,8 @@ extern const struct Animation *const scuttlebug_seg6_anims_06015064[];
 
 
 
+#include "paragoomba/geo_header.h"
+
+
+#include "paragoomba/anim_header.h"
 #endif

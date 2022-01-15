@@ -44,3 +44,7 @@ UNUSED static const u64 binid_6 = 6;
 #include "scuttlebug/anims/data.inc.c"
 #include "scuttlebug/anims/table.inc.c"
 UNUSED static const u64 binid_7 = 7;
+
+#include "paragoomba/model.inc.c"
+#include "paragoomba/anims/data.inc.c"
+#include "paragoomba/anims/table.inc.c"

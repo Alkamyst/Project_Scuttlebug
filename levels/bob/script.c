@@ -54,6 +54,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_EXCLAMATION_BOX, -2622, 439, -7669, 0, -160, 0, 0x00050000, bhvExclamationBox),
 		OBJECT(MODEL_NONE, 2, 264, -956, 0, 0, 0, 0x00020000, bhvCoinFormation),
 		OBJECT(MODEL_NONE, -744, 515, -6222, 0, 0, 0, 0x00110000, bhvCoinFormation),
+		OBJECT(MODEL_PARAGOOMBA, 116, 34, -69, 0, -180, 0, 0x00000000, bhvParagoomba),
 		OBJECT(MODEL_BREAKABLE_BOX, -3277, 1653, -5266, 0, 26, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_BREAKABLE_BOX, -3456, 1653, -5177, 0, 26, 0, 0x00000000, bhvHiddenObject),
 		OBJECT(MODEL_BREAKABLE_BOX, -3189, 1653, -5086, 0, 26, 0, 0x00000000, bhvHiddenObject),
