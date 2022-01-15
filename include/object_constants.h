@@ -1538,6 +1538,16 @@ enum animIDsSwoop {
     /* Animations */
     #define FLY_GUY_ANIM_FLYING                             0x0
 
+/* Paragoomba */
+    /* oBehParams2ndByte */
+    #define PARAGOOMBA_BP_LUNGES                            0x0
+    /* oAction */
+    #define PARAGOOMBA_ACT_IDLE                             0x0
+    #define PARAGOOMBA_ACT_APPROACH_MARIO                   0x1
+    #define PARAGOOMBA_ACT_LUNGE                            0x2
+    /* Animations */
+    #define PARAGOOMBA_ANIM_FLYING                          0x0
+
 /* Goomba triplet spawner */
     /* oBehParams2ndByte */
     #define GOOMBA_TRIPLET_SPAWNER_BP_SIZE_MASK             0x03

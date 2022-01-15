@@ -437,6 +437,7 @@ void bhv_pokey_update(void);
 void bhv_pokey_body_part_update(void);
 void bhv_swoop_update(void);
 void bhv_fly_guy_update(void);
+void bhv_paragoomba_update(void);
 void bhv_goomba_init(void);
 void bhv_goomba_update(void);
 void bhv_goomba_triplet_spawner_update(void);

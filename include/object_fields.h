@@ -851,6 +851,15 @@
 #define /*0x0F8*/ oBitsPlatformBowser   OBJECT_FIELD_OBJ(0x1C)
 #define /*0x0FC*/ oBitsPlatformTimer    OBJECT_FIELD_S32(0x1D)
 
+/* Paragoomba */
+#define /*0x0F4*/ oParaGoombaIdleTimer        OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oParaGoombaOscTimer         OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oParaGoombaUnusedJitter     OBJECT_FIELD_S32(0x1D)
+#define /*0x100*/ oParaGoombaLungeYDecel      OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oParaGoombaLungeTargetPitch OBJECT_FIELD_S32(0x1F)
+#define /*0x108*/ oParaGoombaTargetRoll       OBJECT_FIELD_S32(0x20)
+#define /*0x10C*/ oParaGoombaScaleVel         OBJECT_FIELD_F32(0x21)
+
 /* WF Platform */
 #define /*0x10C*/ oPlatformWFTowerForwardVel   OBJECT_FIELD_F32(0x21)
 #define /*0x110*/ oPlatformWFTowerMoveDistance OBJECT_FIELD_F32(0x22)

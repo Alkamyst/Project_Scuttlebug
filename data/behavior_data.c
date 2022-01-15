@@ -6090,15 +6090,14 @@ const BehaviorScript bhvParagoomba[] = {
     BEGIN(OBJ_LIST_GENACTOR),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     LOAD_ANIMATIONS(oAnimations, paragoomba_anims),
-    ANIMATE(FLY_GUY_ANIM_FLYING),
+    ANIMATE(PARAGOOMBA_ANIM_FLYING),
     SET_HOME(),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 50, /*Gravity*/ 0, /*Bounciness*/ 0, /*Drag strength*/ 0, /*Friction*/ 1000, /*Buoyancy*/ 600, /*Unused*/ 0, 0),
     CALL_NATIVE(bhv_init_room),
-    SET_INT(oInteractionSubtype, INT_SUBTYPE_TWIRL_BOUNCE),
     SET_FLOAT(oGraphYOffset, 30),
     SCALE(/*Unused*/ 0, /*Field*/ 150),
     BEGIN_LOOP(),
-        CALL_NATIVE(bhv_fly_guy_update),
+        CALL_NATIVE(bhv_paragoomba_update),
     END_LOOP(),
 };
 
