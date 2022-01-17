@@ -9,6 +9,7 @@ const GeoLayout bob_area_1_geo[] = {
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_SSF_Area_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_SSF_Side_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_Start_Floor_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1, 238, 2323, bob_dl_Start_Platform_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

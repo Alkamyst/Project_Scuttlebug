@@ -25,6 +25,7 @@ void bhv_collect_star_init(void) {
     } else {
         o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_STAR];
     }
+
     // If BPARAM3 is 1 then the star does not kick Mario out of the level
     s8 starKickout = GET_BPARAM3(o->oBehParams);
     if ((starKickout == 1)) {

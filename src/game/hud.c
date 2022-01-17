@@ -78,7 +78,7 @@ void print_fps(s32 x, s32 y) {
 
 }
 
-// ------------ END OF FPS COUNER -----------------
+// ------------ END OF FPS COUNTER -----------------
 
 struct PowerMeterHUD {
     s8 animation;

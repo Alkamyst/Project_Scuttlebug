@@ -609,17 +609,19 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                     create_dialog_box(DIALOG_170);
                     m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
                 } else {
-                    enable_time_stop();
-                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
-                    m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
+                    play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
+                    save_file_do_save(gCurrSaveFileNum - 1);
+                    m->actionState = ACT_STATE_STAR_DANCE_RETURN;
                 }
                 break;
         }
+    /*
     } else if (m->actionState == ACT_STATE_STAR_DANCE_DO_SAVE && gDialogResponse != DIALOG_RESPONSE_NONE && get_dialog_id() != DIALOG_170) {
         if (gDialogResponse == DIALOG_RESPONSE_YES) {
             save_file_do_save(gCurrSaveFileNum - 1);
         }
         m->actionState = ACT_STATE_STAR_DANCE_RETURN;
+    */
     } else if (m->actionState == ACT_STATE_STAR_DANCE_DO_SAVE && gDialogResponse != DIALOG_RESPONSE_NONE && get_dialog_id() == DIALOG_170) {
         // Pulls Mario out of the level
         disable_time_stop();
