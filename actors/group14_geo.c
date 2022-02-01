@@ -16,3 +16,4 @@
 #include "chain_chomp/geo.inc.c"
 #include "scuttlebug/geo.inc.c"
 #include "paragoomba/geo.inc.c"
+#include "sushi/geo.inc.c"

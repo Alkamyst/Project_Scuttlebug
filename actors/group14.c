@@ -39,7 +39,6 @@ UNUSED static const u64 binid_5 = 5;
 #include "chain_chomp/anims/table.inc.c"
 UNUSED static const u64 binid_6 = 6;
 
-
 #include "scuttlebug/model.inc.c"
 #include "scuttlebug/anims/data.inc.c"
 #include "scuttlebug/anims/table.inc.c"
@@ -48,3 +47,9 @@ UNUSED static const u64 binid_7 = 7;
 #include "paragoomba/model.inc.c"
 #include "paragoomba/anims/data.inc.c"
 #include "paragoomba/anims/table.inc.c"
+UNUSED static const u64 binid_8 = 8;
+
+#include "sushi/model.inc.c"
+#include "sushi/anims/data.inc.c"
+#include "sushi/anims/table.inc.c"
+UNUSED static const u64 binid_9 = 9;

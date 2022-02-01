@@ -333,7 +333,6 @@
 // group 4
 #define MODEL_MANTA_RAY                   0x54        // manta_seg5_geo_05008D14
 #define MODEL_UNAGI                       0x55        // unagi_geo
-#define MODEL_SUSHI                       0x56        // sushi_geo
 #define MODEL_DL_WHIRLPOOL                0x57        // whirlpool_seg5_dl_05013CB8
 #define MODEL_CLAM_SHELL                  0x58        // clam_shell_geo
 
@@ -413,6 +412,7 @@
 #define MODEL_KOOPA_FLAG                  0x6A        // koopa_flag_geo
 #define MODEL_WOODEN_POST                 0x6B        // wooden_post_geo
 #define MODEL_PARAGOOMBA                  0x6C        // paragoomba_geo
+#define MODEL_SUSHI                       0x6D        // sushi_geo
 
 // group 15
 #define MODEL_MIPS                        0x64        // mips_geo

@@ -49,7 +49,7 @@ static s8 sPeachManualBlinkTime = 0;
 static s8 sPeachIsBlinking = FALSE;
 static s8 sPeachBlinkTimes[7] = { 2, 3, 2, 1, 2, 3, 2 };
 
-static u8 sStarsNeededForDialog[] = { 1, 3, 8, 30, 50, 70 };
+static u8 sStarsNeededForDialog[] = { 65, 66, 67, 68, 69, 70 };
 
 /**
  * Data for the jumbo star cutscene. It specifies the flight path after triple
@@ -211,6 +211,8 @@ s32 get_star_collection_dialog(struct MarioState *m) {
     s32 i;
     s32 dialogID = 0;
     s32 numStarsRequired;
+
+// TODO: Make special dialog for 100 coins star
 
     for (i = 0; i < ARRAY_COUNT(sStarsNeededForDialog); i++) {
         numStarsRequired = sStarsNeededForDialog[i];
