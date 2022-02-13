@@ -1614,47 +1614,47 @@ void render_pause_my_score_coins(void) {
         u8 *actName5 = segmented_to_virtual(actNameTbl[COURSE_NUM_TO_INDEX(gCurrCourseNum) * 6 + 4]);
         u8 *actName6 = segmented_to_virtual(actNameTbl[COURSE_NUM_TO_INDEX(gCurrCourseNum) * 6 + 5]);
 
-        print_generic_string(140, 100, actName1);
-        print_generic_string(140, 85, actName2);
-        print_generic_string(140, 70, actName3);
-        print_generic_string(140, 55, actName4);
-        print_generic_string(140, 40, actName5);
-        print_generic_string(140, 25, actName6);
+        print_generic_string(140, 120, actName1);
+        print_generic_string(140, 105, actName2);
+        print_generic_string(140, 90, actName3);
+        print_generic_string(140, 75, actName4);
+        print_generic_string(140, 60, actName5);
+        print_generic_string(140, 45, actName6);
 
         if (starFlags & (1 << 0)) {
-            print_generic_string(130, 100, textStar);
+            print_generic_string(130, 120, textStar);
         } else {
-            print_generic_string(130, 100, textUnfilledStar);
+            print_generic_string(130, 120, textUnfilledStar);
         }
 
         if (starFlags & (1 << 1)) {
-            print_generic_string(130, 85, textStar);
+            print_generic_string(130, 105, textStar);
         } else {
-            print_generic_string(130, 85, textUnfilledStar);
+            print_generic_string(130, 105, textUnfilledStar);
         }
 
         if (starFlags & (1 << 2)) {
-            print_generic_string(130, 70, textStar);
+            print_generic_string(130, 90, textStar);
         } else {
-            print_generic_string(130, 70, textUnfilledStar);
+            print_generic_string(130, 90, textUnfilledStar);
         }
 
         if (starFlags & (1 << 3)) {
-            print_generic_string(130, 55, textStar);
+            print_generic_string(130, 75, textStar);
         } else {
-            print_generic_string(130, 55, textUnfilledStar);
+            print_generic_string(130, 75, textUnfilledStar);
         }
 
         if (starFlags & (1 << 4)) {
-            print_generic_string(130, 40, textStar);
+            print_generic_string(130, 60, textStar);
         } else {
-            print_generic_string(130, 40, textUnfilledStar);
+            print_generic_string(130, 60, textUnfilledStar);
         }
 
         if (starFlags & (1 << 5)) {
-            print_generic_string(130, 25, textStar);
+            print_generic_string(130, 45, textStar);
         } else {
-            print_generic_string(130, 25, textUnfilledStar);
+            print_generic_string(130, 45, textUnfilledStar);
         }
 
         /*

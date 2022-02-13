@@ -642,6 +642,13 @@ static void puppycam_input_hold_preset3(void) {
             gPuppyCam.yawTarget += 0x2000 - gPuppyCam.yawTarget % 0x2000;
         }
 
+        if (gPlayer1Controller->buttonDown & L_JPAD) {
+            gPuppyCam.yawTarget -= DEGREES(2);
+        }
+        if (gPlayer1Controller->buttonDown & R_JPAD) {
+            gPuppyCam.yawTarget += DEGREES(2);
+        }
+
         if (gPuppyCam.mode3Flags & PUPPYCAM_MODE3_ZOOMED_MED) gPuppyCam.pitchTarget = approach_s32(gPuppyCam.pitchTarget, 0x3800, 0x200, 0x200);
         if (gPuppyCam.mode3Flags & PUPPYCAM_MODE3_ZOOMED_OUT) gPuppyCam.pitchTarget = approach_s32(gPuppyCam.pitchTarget, 0x3000, 0x200, 0x200);
 
@@ -671,7 +678,7 @@ static void puppycam_input_hold_preset3(void) {
             gPuppyCam.stickN[1]   = 1;
             gPuppyCam.mode3Flags |= PUPPYCAM_MODE3_ZOOMED_MED;
             gPuppyCam.mode3Flags &= ~PUPPYCAM_MODE3_ZOOMED_OUT;
-            gPuppyCam.zoomTarget  = gPuppyCam.zoomPoints[1];
+            gPuppyCam.zoomTarget  = gPuppyCam.zoomPoints[0];
 
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
         }
@@ -680,7 +687,7 @@ static void puppycam_input_hold_preset3(void) {
             gPuppyCam.stickN[1] = 1;
             gPuppyCam.mode3Flags |= PUPPYCAM_MODE3_ZOOMED_OUT;
             gPuppyCam.mode3Flags &= ~PUPPYCAM_MODE3_ZOOMED_MED;
-            gPuppyCam.zoomTarget = gPuppyCam.zoomPoints[2];
+            gPuppyCam.zoomTarget = gPuppyCam.zoomPoints[1];
 
             play_sound(SOUND_MENU_CAMERA_ZOOM_OUT, gGlobalSoundSource);
         }
@@ -1275,18 +1282,23 @@ static void puppycam_collision(void) {
         gPuppyCam.collisionDistance = sqrtf(MAX(dist[0], dist[1]));
         if (gPuppyCam.zoom > gPuppyCam.collisionDistance) {
             gPuppyCam.zoom = MIN(gPuppyCam.collisionDistance, gPuppyCam.zoomTarget);
+            // Caused problems with steep slope collision with the
+            /*
             if (gPuppyCam.zoom - gPuppyCam.zoomTarget < 5) {
-                if (dist[0] >= dist[1]) {
                     vec3_copy(gPuppyCam.pos, hitpos[0]);
                 } else {
                     vec3_copy_y_off(gPuppyCam.pos, hitpos[1], (gPuppyCam.povHeight * 0.6f));
                 }
             }
+            */
         }
     }
+    // Too invisible for my liking
+    /*
     #define START_DIST 500
     #define END_DIST   250
     gPuppyCam.opacity = CLAMP((f32)(((gPuppyCam.zoom - END_DIST) / 255.0f) * (START_DIST - END_DIST)), 0, 255);
+    */
 }
 
 extern Vec3f sOldPosition;
