@@ -45,6 +45,7 @@ void bhv_hidden_star_trigger_loop(void) {
 
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
+    spawn_object(o, MODEL_SPARKLES_ANIMATION, bhvHiddenSparklesSpawner);
 }
 
 void bhv_bowser_course_red_coin_star_loop(void) {
@@ -65,4 +66,10 @@ void bhv_bowser_course_red_coin_star_loop(void) {
             }
             break;
     }
+}
+
+void bhv_hidden_sparkles_loop(void) {
+    struct Object *sparkleObj = spawn_object(o, MODEL_SPARKLES_ANIMATION, bhvSparkle);
+    obj_translate_xyz_random(sparkleObj, 135.0f);
+    obj_scale_random(sparkleObj, 1.0f, 0.0f);
 }

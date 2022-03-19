@@ -139,10 +139,10 @@ void puppycam_default_config(void) {
 
 // Initial setup. Ran at the beginning of the game and never again.
 void puppycam_boot(void) {
-    gPuppyCam.zoomPoints[0] = 1000;
-    gPuppyCam.zoomPoints[1] = 1500;
-    gPuppyCam.zoomPoints[2] = 2000;
-    gPuppyCam.povHeight     = 125;
+    gPuppyCam.zoomPoints[0] = 800;
+    gPuppyCam.zoomPoints[1] = 1400;
+    gPuppyCam.zoomPoints[2] = 1900;
+    gPuppyCam.povHeight     = 100;
     gPuppyCam.stick2[0]     = 0;
     gPuppyCam.stick2[1]     = 0;
     gPuppyCam.stickN[0]     = 0;
@@ -1244,7 +1244,7 @@ static void puppycam_script(void) {
         }
     }
 }
-
+/*
 // Handles collision detection using ray casting.
 static void puppycam_collision(void) {
     struct WallCollisionData wall0, wall1;
@@ -1283,24 +1283,24 @@ static void puppycam_collision(void) {
         if (gPuppyCam.zoom > gPuppyCam.collisionDistance) {
             gPuppyCam.zoom = MIN(gPuppyCam.collisionDistance, gPuppyCam.zoomTarget);
             // Caused problems with steep slope collision with the
-            /*
+            
             if (gPuppyCam.zoom - gPuppyCam.zoomTarget < 5) {
                     vec3_copy(gPuppyCam.pos, hitpos[0]);
                 } else {
                     vec3_copy_y_off(gPuppyCam.pos, hitpos[1], (gPuppyCam.povHeight * 0.6f));
                 }
             }
-            */
+            
         }
     }
     // Too invisible for my liking
-    /*
+    
     #define START_DIST 500
     #define END_DIST   250
     gPuppyCam.opacity = CLAMP((f32)(((gPuppyCam.zoom - END_DIST) / 255.0f) * (START_DIST - END_DIST)), 0, 255);
-    */
+    
 }
-
+*/
 extern Vec3f sOldPosition;
 extern Vec3f sOldFocus;
 extern struct PlayerGeometry sMarioGeometry;
@@ -1359,13 +1359,8 @@ void puppycam_loop(void) {
         puppycam_input_core();
         puppycam_projection();
         puppycam_script();
-        if (gPuppyCam.flags & PUPPYCAM_BEHAVIOUR_COLLISION) {
-            puppycam_collision();
-        } else {
-            gPuppyCam.opacity = 255;
-        }
-    } else if (gPuppyCam.cutscene) {
         gPuppyCam.opacity = 255;
+    } else if (gPuppyCam.cutscene) {
         puppycam_process_cutscene();
     }
     puppycam_apply();

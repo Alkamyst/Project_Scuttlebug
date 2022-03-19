@@ -1059,6 +1059,16 @@ const BehaviorScript bhvCoinSparklesSpawner[] = {
     DEACTIVATE(),
 };
 
+const BehaviorScript bhvHiddenSparklesSpawner[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    DISABLE_RENDERING(),
+    BEGIN_REPEAT(3),
+        CALL_NATIVE(bhv_hidden_sparkles_loop),
+    END_REPEAT(),
+    DEACTIVATE(),
+};
+
 const BehaviorScript bhvWallTinyStarParticle[] = {
     BEGIN(OBJ_LIST_UNIMPORTANT),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),

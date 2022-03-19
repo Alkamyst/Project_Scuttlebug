@@ -629,7 +629,6 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
         disable_time_stop();
         level_trigger_warp(m, WARP_OP_STAR_EXIT);
     } else if (m->actionState == ACT_STATE_STAR_DANCE_RETURN && is_anim_at_end(m)) {
-        disable_time_stop();
         enable_background_sound();
         s32 dialogID = get_star_collection_dialog(m);
         if (dialogID) {
@@ -638,6 +637,7 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
         } else {
             set_mario_action(m, isInWater ? ACT_WATER_IDLE : ACT_IDLE, 0);
         }
+        reset_camera(gCurrentArea->camera);
     }
 }
 

@@ -64,6 +64,7 @@ extern const BehaviorScript bhvTenCoinsSpawn[];
 extern const BehaviorScript bhvSingleCoinGetsSpawned[];
 extern const BehaviorScript bhvCoinSparkles[];
 extern const BehaviorScript bhvCoinSparklesSpawner[];
+extern const BehaviorScript bhvHiddenSparklesSpawner[];
 extern const BehaviorScript bhvWallTinyStarParticle[];
 extern const BehaviorScript bhvVertStarParticleSpawner[];
 extern const BehaviorScript bhvPoundTinyStarParticle[];
