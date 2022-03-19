@@ -216,6 +216,10 @@ s32 get_star_collection_dialog(struct MarioState *m) {
 
     for (i = 0; i < ARRAY_COUNT(sStarsNeededForDialog); i++) {
         numStarsRequired = sStarsNeededForDialog[i];
+        if (m->numStars == 1 && m->numCoins >= X_COIN_STAR) {
+            dialogID = DIALOG_141;
+            break;
+        }
         if (m->prevNumStarsForDialog < numStarsRequired && m->numStars >= numStarsRequired) {
             dialogID = i + DIALOG_141;
             break;
