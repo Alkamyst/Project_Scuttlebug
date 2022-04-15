@@ -12,7 +12,7 @@
 #define SCRAM "scram--"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
+DEFINE_DIALOG(DIALOG_000, 1, 6, 95, 200, _("\
 Wow! You're smack in the\n\
 middle of the battlefield.\n\
 You'll find the Power\n\
@@ -33,25 +33,16 @@ characters by facing them\n\
 and pressing [B]."))
 
 DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
-Watch out! If you wander\n\
-around here, you're liable\n\
-to be " PLASTERED " by a\n\
-water bomb!\n\
-Those enemy Bob-ombs love\n\
-to fight, and they're\n\
-always finding ways to\n\
-attack.\n\
-This meadow has become\n\
-a battlefield ever since\n\
-the Big Bob-omb got his\n\
-paws on the Power Star.\n\
-Can you recover the Star\n\
-for us? Cross the bridge\n\
-and go left up the path\n\
-to find the Big Bob-omb.\n\
-Please come back to see\n\
-me after you've retrieved\n\
-the Power Star!"))
+SimpleFlips, Nathaniel\n\
+Scuttlebug Bandy has\n\
+turned into a pirate!\n\
+\n\
+Now him and his\n\
+scuttlebug jamboree\n\
+are looking for buried\n\
+treasure in this cavern.\n\
+Can you stop him from\n\
+getting it?"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Hey, you! It's dangerous\n\
@@ -89,9 +80,9 @@ set up cannons for you."))
 
 DEFINE_DIALOG(DIALOG_004, 1, 5, 95, 200, _("\
 There were no\n\
-Gay Baby Jails this hack\n\
+GBJs this hack\n\
 \n\
-Current Gay Baby Jail\n\
+Current GBJ\n\
 Drystreak:\n\
 0101001101101000\n\
 0110111101110101\n\
@@ -227,52 +218,78 @@ Do you want to Save?\n\
 \n\
 //You Bet//Not Now"))
 
-DEFINE_DIALOG(DIALOG_015, 1, 4, 30, 200, _("\
-You can punch enemies to\n\
-knock them down. Press [A]\n\
-to jump, [B] to punch.\n\
-Press [A] then [B] to Kick.\n\
-To pick something up,\n\
-press [B], too. To throw\n\
-something you're holding,\n\
-press [B] again."))
+DEFINE_DIALOG(DIALOG_015, 1, 5, 30, 200, _("\
+You can BLJ through walls\n\
+to find secrets and stuff.\n\
+Hold [Z], press [A], and\n\
+then hold the control stick\n\
+forward to long jump.\n\
+Then, hold the control\n\
+stick back while\n\
+repeatidly pressing\n\
+[A] to start long\n\
+jumping backwards.\n\
+If you find the right\n\
+wall, you will be able\n\
+to become scuttlebug\n\
+aligned in 12 hours!"))
 
-DEFINE_DIALOG(DIALOG_016, 1, 3, 30, 200, _("\
-Hop on the shiny shell and\n\
-ride wherever you want to\n\
-go! Shred those enemies!"))
+DEFINE_DIALOG(DIALOG_016, 1, 4, 95, 200, _("\
+Have you ever wondered\n\
+how Nathaniel Bandy\n\
+got his boat stuck in\n\
+this cavern?\n\
+Have you ever wondered\n\
+why Nathaniel Bandy\n\
+suddenly became a\n\
+pirate?\n\
+Have you ever wondered\n\
+how its always Nathaniel\n\
+Bandy every time?\n\
+\n\
+Mr Flips, I believe that\n\
+there is more to this\n\
+cavern than just some\n\
+buried booty.\n\
+Indeed, I think this\n\
+cavern holds the very\n\
+secrets of the universe\n\
+within it.\n\
+...or, perhaps, even\n\
+parallel universes\n\
+as well...\n\
+\n\
+I would watch out\n\
+Mr Flips... I fear that\n\
+you may make a grave\n\
+enemy while here..."))
 
-DEFINE_DIALOG(DIALOG_017, 1, 4, 30, 200, _("\
-I'm the Big Bob-omb, lord\n\
-of all blasting matter,\n\
-king of ka-booms the\n\
-world over!\n\
-How dare you scale my\n\
-mountain? By what right\n\
-do you set foot on my\n\
-imperial mountaintop?\n\
-You may have eluded my\n\
-guards, but you'll never\n\
-escape my grasp...\n\
+DEFINE_DIALOG(DIALOG_017, 1, 5, 30, 200, _("\
+It's me, Nathaniel\n\
+Scuttlepirate Bandy, the\n\
+king of the scuttlebugs.\n\
 \n\
-...and you'll never take\n\
-away my Power Star. I\n\
-hereby challenge you,\n\
-Mario!\n\
-If you want the Star I\n\
-hold, you must prove\n\
-yourself in battle.\n\
 \n\
-Can you pick me up from\n\
-the back and hurl me to\n\
-this royal turf? I think\n\
-that you cannot!"))
+As you can see, I kinda\n\
+got this boat stuck.\n\
+Don't ask how, it's a\n\
+long story.\n\
+\n\
+But, that doesn't matter.\n\
+What does matter is that\n\
+I find the treasure first.\n\
+So, it's time for you\n\
+to go overboard."))
 
 DEFINE_DIALOG(DIALOG_018, 1, 4, 30, 200, _("\
-I'm sleeping because...\n\
-...I'm sleepy. I don't\n\
-like being disturbed.\n\
-Please walk quietly."))
+Ever need in some extra\n\
+distance in a jump?\n\
+The JUMP DIVE has you\n\
+covered!\n\
+If [Z] is pressed in the\n\
+air followed by [A],\n\
+you will perform a\n\
+mid-air dive!"))
 
 DEFINE_DIALOG(DIALOG_019, 1, 2, 30, 200, _("\
 Shhh! Please walk\n\
@@ -1380,26 +1397,23 @@ after all. I won't gravel,\n\
 er, grovel. Here, you win.\n\
 Take this with you!"))
 
-DEFINE_DIALOG(DIALOG_116, 1, 5, 95, 200, _("\
-Whaaa....Whaaat?\n\
-Can it be that a\n\
-pipsqueak like you has\n\
-defused the Bob-omb\n\
-king????\n\
-You might be fast enough\n\
-to ground me, but you'll\n\
-have to pick up the pace\n\
-if you want to take King\n\
-Bowser by the tail.\n\
-Methinks my troops could\n\
-learn a lesson from you!\n\
-Here is your Star, as I\n\
-promised, Mario.\n\
+DEFINE_DIALOG(DIALOG_116, 1, 2, 95, 200, _("\
+ouch\n\
 \n\
-If you want to see me\n\
-again, select this Star\n\
-from the menu. For now,\n\
-farewell."))
+that hurt\n\
+\n\
+you didn't need to do\n\
+me like that\n\
+...\n\
+\n\
+....................................................\n\
+.......................\n\
+.......................\n\
+.................................\n\
+..........................................\n\
+............................\n\
+pink gold peach is best\n\
+waifu!!!"))
 
 DEFINE_DIALOG(DIALOG_117, 1, 1, 95, 200, _("\
 Who...walk...here?\n\
@@ -1508,11 +1522,8 @@ here. Pound on his back to\n\
 make him lower his head.\n\
 Don't become his lunch."))
 
-DEFINE_DIALOG(DIALOG_128, 1, 4, 95, 200, _("\
-You must fight with\n\
-honor! It is against the\n\
-royal rules to throw the\n\
-king out of the ring!"))
+DEFINE_DIALOG(DIALOG_128, 1, 1, 95, 200, _("\
+EEDIOT!"))
 
 DEFINE_DIALOG(DIALOG_129, 1, 5, 30, 200, _("\
 Welcome to the Vanish\n\
