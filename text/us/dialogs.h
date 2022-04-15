@@ -87,16 +87,24 @@ waiting for you. Be sure\n\
 to talk to them--they'll\n\
 set up cannons for you."))
 
-DEFINE_DIALOG(DIALOG_004, 1, 3, 95, 200, _("\
-We're peace-loving\n\
-Bob-ombs, so we don't use\n\
-cannons.\n\
-But if you'd like\n\
-to blast off, we don't\n\
-mind. Help yourself.\n\
-We'll prepare all of the\n\
-cannons in this course for\n\
-you to use. Bon Voyage!"))
+DEFINE_DIALOG(DIALOG_004, 1, 5, 95, 200, _("\
+There were no\n\
+Gay Baby Jails this hack\n\
+\n\
+Current Gay Baby Jail\n\
+Drystreak:\n\
+0101001101101000\n\
+0110111101110101\n\
+0111010001101111\n\
+0111010101110100\n\
+0111001100100000\n\
+0111010001101111\n\
+0010000001010011\n\
+0110100101101101\n\
+0111000001101100\n\
+0110010101100110\n\
+0110110001101001\n\
+0111000001110011"))
 
 DEFINE_DIALOG(DIALOG_005, 1, 3, 30, 200, _("\
 Hey, Mario! Is it true\n\
@@ -1277,19 +1285,9 @@ Marker.』 When you collect\n\
 all 8 Red Coins, the Star\n\
 will appear here."))
 
-DEFINE_DIALOG(DIALOG_105, 1, 3, 95, 200, _("\
-Ready for blastoff! Come\n\
-on, hop into the cannon!\n\
-\n\
-You can reach the Star on\n\
-the floating island by\n\
-using the four cannons.\n\
-Use the Control Stick to\n\
-aim, then press [A] to fire.\n\
-\n\
-If you're handy, you can\n\
-grab on to trees or poles\n\
-to land."))
+DEFINE_DIALOG(DIALOG_105, 1, 2, 95, 200, _("\
+Jet Eriksen is my name\n\
+and GBJ is my game."))
 
 DEFINE_DIALOG(DIALOG_106, 1, 2, 95, 200, _("\
 Ready for blastoff! Come\n\
