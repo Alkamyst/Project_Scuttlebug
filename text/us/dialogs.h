@@ -12,25 +12,23 @@
 #define SCRAM "scram--"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 6, 95, 200, _("\
-Wow! You're smack in the\n\
-middle of the battlefield.\n\
-You'll find the Power\n\
-Stars that Bowser stole\n\
-inside the painting\n\
-worlds.\n\
-First, talk to the\n\
-Bob-omb Buddy. (Press [B]\n\
-to talk.) He'll certainly\n\
-help you out, and so will\n\
-his " COMRADES " in other\n\
-areas.\n\
-To read signs, stop, face\n\
-them and press [B]. Press [A]\n\
-or [B] to scroll ahead. You\n\
-can talk to some other\n\
-characters by facing them\n\
-and pressing [B]."))
+DEFINE_DIALOG(DIALOG_000, 1, 4, 95, 200, _("\
+Hey Simple, have you\n\
+seen the inside of the\n\
+hull?\n\
+\n\
+Everywhere I look I see\n\
+these HIDEOUS freaks of\n\
+nature!\n\
+\n\
+Apparently, these are \n\
+the Paragoomba Bandy's,\n\
+a wild species on the\n\
+brink of extinction.\n\
+Well, I don't care\n\
+about endangered\n\
+animals! These\n\
+abominations need to go!"))
 
 DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
 SimpleFlips, Nathaniel\n\

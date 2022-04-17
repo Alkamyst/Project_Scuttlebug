@@ -59,8 +59,8 @@ static void paragoomba_act_idle(void) {
  */
 static void paragoomba_act_approach_mario(void) {
     // If we are >2000 units from home or Mario is <2000 units from us
-    if (o->oDistanceToMario >= 25000.0f || o->oDistanceToMario < 2000.0f) {
-        obj_forward_vel_approach(10.0f, 0.5f);
+    if (o->oDistanceToMario >= 25000.0f || o->oDistanceToMario < 600.0f) {
+        obj_forward_vel_approach(5.0f, 0.5f);
 
         // Turn toward home or Mario
         obj_face_yaw_approach(o->oAngleToMario, 0x400);
@@ -68,7 +68,7 @@ static void paragoomba_act_approach_mario(void) {
 
         // If facing toward mario and we are either near mario laterally or
         // far above him
-        if (abs_angle_diff(o->oAngleToMario, o->oFaceAngleYaw) < 0x2000
+        /*if (abs_angle_diff(o->oAngleToMario, o->oFaceAngleYaw) < 0x2000
             && (o->oPosY - gMarioObject->oPosY > 400.0f || o->oDistanceToMario < 400.0f)) {
             // Lunge
             o->oAction = PARAGOOMBA_ACT_LUNGE;
@@ -78,6 +78,7 @@ static void paragoomba_act_approach_mario(void) {
             o->oVelY = 25.0f * -sins(o->oParaGoombaLungeTargetPitch);
             o->oParaGoombaLungeYDecel = -o->oVelY / 30.0f;
         }
+        */
     } else if (obj_forward_vel_approach(0.0f, 0.2f)) {
         o->oAction = PARAGOOMBA_ACT_IDLE;
     }
