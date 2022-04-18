@@ -93,6 +93,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_KING_BOBOMB, 2863, 735, -6650, 0, 90, 0, 0x00000000, bhvKingBobomb),
 		OBJECT(MODEL_BOBOMB_BUDDY, 1075, 238, 1011, 0, -46, 0, (1 << 16), bhvBobombBuddy),
 		OBJECT(MODEL_BOBOMB_BUDDY, 1801, -834, -12861, 0, -121, 0, (16 << 16), bhvBobombBuddy),
+		OBJECT(MODEL_BOBOMB_BUDDY, 1095, 1119, -2122, 0, 88, 0, (48 << 16), bhvBobombBuddy),
 		OBJECT(MODEL_PURPLE_SWITCH, -744, 412, -6221, 0, 22, 0, 0x00000000, bhvFloorSwitchHiddenObjects),
 		OBJECT(MODEL_RED_COIN, 7095, -4301, -7288, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 5011, -4852, -8480, 0, 0, 0, 0x00000000, bhvRedCoin),

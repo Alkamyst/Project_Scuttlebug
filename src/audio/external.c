@@ -87,7 +87,7 @@ u8 sDialogSpeaker[] = {
     /* 1*/ _,     _,     _,     _,     _,     _,     _,     KBOMB, _,     _,
     /* 2*/ _,     BOWS1, BOWS1, BOWS1, BOWS1, BOWS1, BOWS1, BOWS1, BOWS1, BOWS1,
     /* 3*/ _,     _,     _,     _,     _,     _,     _,     TUXIE, _,     _,
-    /* 4*/ _,     KOOPA, _,     _,     _,     _,     _,     BOMB,  _,     _,
+    /* 4*/ _,     KOOPA, _,     _,     _,     _,     _,     BOMB,  BOMB,     _,
     /* 5*/ _,     _,     _,     _,     _,     TUXIE, TUXIE, TUXIE, TUXIE, TUXIE,
     /* 6*/ _,     _,     _,     _,     _,     _,     _,     BOWS2, _,     _,
     /* 7*/ _,     _,     _,     _,     _,     _,     _,     _,     _,     UKIKI,
@@ -298,6 +298,7 @@ u8 sBackgroundMusicDefaultVolume[] = {
     65,  // SEQ_MENU_FILE_SELECT
     0,   // SEQ_EVENT_CUTSCENE_LAKITU (not in JP)
     75,  // SEQ_SPM_FLORO_CAVERNS
+    75,  // SEQ_MK64_RAINBOW_ROAD
 };
 
 STATIC_ASSERT(ARRAY_COUNT(sBackgroundMusicDefaultVolume) == SEQ_COUNT,

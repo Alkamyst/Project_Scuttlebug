@@ -632,11 +632,8 @@ DEFINE_DIALOG(DIALOG_047, 1, 2, 95, 200, _("\
 Hi! I'll prepare the\n\
 cannon for you!"))
 
-DEFINE_DIALOG(DIALOG_048, 1, 4, 30, 200, _("\
-Snow Mountain Summit\n\
-Watch for slippery\n\
-conditions! Please enter\n\
-the cottage first."))
+DEFINE_DIALOG(DIALOG_048, 1, 1, 95, 200, _("\
+Shoutouts to Mayro."))
 
 DEFINE_DIALOG(DIALOG_049, 1, 5, 30, 200, _("\
 Remember that tricky Wall\n\

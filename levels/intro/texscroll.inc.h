@@ -1,0 +1,2 @@
+extern void scroll_ScuttlePirate_Title_Treasure_Chest_mesh_vtx_8();
+extern void scroll_actor_dl_ScuttlePirate_Title();

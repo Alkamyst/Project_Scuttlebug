@@ -24,7 +24,6 @@ const GeoLayout bob_area_1_geo[] = {
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 7955, -91, -7278, 0, 118, 0, bob_dl_Rock_Platform_005_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 16, -1020, -12740, 3, -21, 8, bob_dl_Rock_Platform_006_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_SSF_Area_mesh_layer_1),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_SSF_Side_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 0, -71, 191, 0, 90, 0, bob_dl_Start_Floor_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1, 238, 2323, bob_dl_Start_Platform_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 5500, -5891, -4883, 0, 27, 0, bob_dl_Treasure_Chest_mesh_layer_1),
