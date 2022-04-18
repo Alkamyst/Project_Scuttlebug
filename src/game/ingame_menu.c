@@ -1807,17 +1807,6 @@ void render_pause_castle_menu_box(s16 x, s16 y) {
     gDPSetEnvColor(gDisplayListHead++, 0, 0, 0, 105);
     gSPDisplayList(gDisplayListHead++, dl_draw_text_bg_box);
     gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
-
-    create_dl_translation_matrix(MENU_MTX_PUSH, x + 6, y - 28, 0);
-    create_dl_rotation_matrix(MENU_MTX_NOPUSH, DEFAULT_DIALOG_BOX_ANGLE, 0, 0, 1.0f);
-    gDPSetEnvColor(gDisplayListHead++, 255, 255, 255, gDialogTextAlpha);
-    gSPDisplayList(gDisplayListHead++, dl_draw_triangle);
-    gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
-
-    create_dl_translation_matrix(MENU_MTX_PUSH, x - 9, y - 101, 0);
-    create_dl_rotation_matrix(MENU_MTX_NOPUSH, 270.0f, 0, 0, 1.0f);
-    gSPDisplayList(gDisplayListHead++, dl_draw_triangle);
-    gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
 }
 
 void highlight_last_course_complete_stars(void) {
@@ -1898,10 +1887,7 @@ void render_pause_castle_main_strings(s16 x, s16 y) {
     s16 prevCourseIndex = gDialogLineNum;
 
 
-    handle_menu_scrolling(
-        MENU_SCROLL_VERTICAL, &gDialogLineNum,
-        COURSE_NUM_TO_INDEX(COURSE_MIN) - 1, COURSE_NUM_TO_INDEX(COURSE_BONUS_STAGES) + 1
-    );
+
 
     if (gDialogLineNum == COURSE_NUM_TO_INDEX(COURSE_BONUS_STAGES) + 1) {
         gDialogLineNum = COURSE_NUM_TO_INDEX(COURSE_MIN); // Exceeded max, set to min
@@ -1936,20 +1922,12 @@ void render_pause_castle_main_strings(s16 x, s16 y) {
         print_generic_string(x + 34, y - 5, textCoin);
         int_to_str(save_file_get_course_coin_score(gCurrSaveFileNum - 1, gDialogLineNum), strVal);
         print_generic_string(x + 54, y - 5, strVal);
+        
+        print_generic_string(x - 9, y + 30, courseName);
+
+        gSPDisplayList(gDisplayListHead++, dl_ia_text_end);
     } else { // Castle secret stars
-        u8 textStarX[] = { TEXT_STAR_X };
-        courseName = segmented_to_virtual(courseNameTbl[COURSE_MAX]);
-        print_generic_string(x + 40, y + 13, textStarX);
-        int_to_str(save_file_get_total_star_count(gCurrSaveFileNum - 1,
-                                                  COURSE_NUM_TO_INDEX(COURSE_BONUS_STAGES),
-                                                  COURSE_NUM_TO_INDEX(COURSE_MAX)),
-                                                  strVal);
-        print_generic_string(x + 60, y + 13, strVal);
     }
-
-    print_generic_string(x - 9, y + 30, courseName);
-
-    gSPDisplayList(gDisplayListHead++, dl_ia_text_end);
 }
 
 s8 gCourseCompleteCoinsEqual = FALSE;
@@ -2167,10 +2145,6 @@ void render_course_complete_lvl_info_and_hud_str(void) {
         play_star_fanfare_and_flash_hud(HUD_FLASH_KEYS, 0);
         return;
     } else { // Castle secret stars
-        name = segmented_to_virtual(actNameTbl[COURSE_STAGES_MAX * 6]);
-
-        print_hud_course_complete_coins(118, 103);
-        play_star_fanfare_and_flash_hud(HUD_FLASH_STARS, 1 << (gLastCompletedStarNum - 1));
     }
 
     // Print star glyph

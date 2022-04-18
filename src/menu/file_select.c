@@ -522,16 +522,6 @@ void check_score_menu_clicked_buttons(struct Object *scoreButton) {
                 }
                 else { // Check if a save file is clicked
                     if (sMainMenuTimer >= SCORE_TIMER) {
-                        // If clicked in a existing save file, select it too see it's score
-                        if (save_file_exists(buttonID - MENU_BUTTON_SCORE_MIN) == TRUE) {
-                            play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
-#if ENABLE_RUMBLE
-                            queue_rumble_data(5, 80);
-#endif
-                            sMainMenuButtons[buttonID]->oMenuButtonState = MENU_BUTTON_STATE_GROWING;
-                            sSelectedButtonID = buttonID;
-                        }
-                        else {
                             // If clicked in a non-existing save file, play buzz sound
                             play_sound(SOUND_MENU_CAMERA_BUZZ, gGlobalSoundSource);
 #if ENABLE_RUMBLE
@@ -543,7 +533,6 @@ void check_score_menu_clicked_buttons(struct Object *scoreButton) {
                                 sFadeOutText = TRUE;
                                 sMainMenuTimer = 0;
                             }
-                        }
                     }
                 }
                 sCurrentMenuLevel = MENU_LAYER_SUBMENU;

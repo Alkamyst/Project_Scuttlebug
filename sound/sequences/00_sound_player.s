@@ -6177,8 +6177,8 @@ layer_note1 20, 0x28, 127
 layer_end
 
 .sound_obj_bobomb_buddy_talk:
-chan_setbank 8
-chan_setinstr 12
+chan_setbank 9
+chan_setinstr 7
 chan_setvibratoextent 80
 chan_setvibratorate 5
 chan_setlayer 0, .layer_2684

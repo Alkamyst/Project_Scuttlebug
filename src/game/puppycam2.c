@@ -133,7 +133,7 @@ void puppycam_default_config(void) {
     gPuppyCam.options.sensitivityX   = 100;
     gPuppyCam.options.sensitivityY   = 100;
     gPuppyCam.options.turnAggression = 50;
-    gPuppyCam.options.analogue       = 0;
+    gPuppyCam.options.analogue       = 1;
     gPuppyCam.options.inputType      = 0;
 }
 

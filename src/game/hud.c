@@ -26,8 +26,8 @@
  * cannon reticle, and the unused keys.
  **/
 
-#define HUD_POWER_METER_X            140
-#define HUD_POWER_METER_EMPHASIZED_Y 166
+#define HUD_POWER_METER_X            50
+#define HUD_POWER_METER_EMPHASIZED_Y 190
 #define HUD_POWER_METER_Y            200
 #define HUD_POWER_METER_HIDDEN_Y     300
 

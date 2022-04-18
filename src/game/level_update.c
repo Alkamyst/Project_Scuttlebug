@@ -1302,6 +1302,7 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
+	if (gCurrLevelNum == LEVEL_CASTLE_GROUNDS) return 0;
     // Removes Act Selector from BOB and resets coin values on enter
 	if (gCurrLevelNum == LEVEL_BOB) {
         gMarioState->numCoins = 0;

@@ -42,39 +42,76 @@ treasure in this cavern.\n\
 Can you stop him from\n\
 getting it?"))
 
-DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
-Hey, you! It's dangerous\n\
-ahead, so listen up! Take\n\
-my advice.\n\
+DEFINE_DIALOG(DIALOG_002, 1, 5, 95, 200, _("\
 \n\
-Cross the two\n\
-bridges ahead, then\n\
-watch for falling\n\
-water bombs.\n\
-The Big Bob-omb at the\n\
-top of the mountain is\n\
-very powerful--don't let\n\
-him grab you!\n\
-We're Bob-omb Buddies,\n\
-and we're on your side.\n\
-You can talk to us\n\
-whenever you'd like to!"))
+        ------- \n\
+         Credits\n\
+        -------\n\
+\n\
+This hack was made by\n\
+Luigiman04.\n\
+\n\
+\n\
+\n\
+Music was imported by\n\
+Luigiman04 and\n\
+DobieMeltfire.\n\
+\n\
+\n\
+HackerSM64 was used as\n\
+the repo.\n\
+\n\
+\n\
+\n\
+This hack is a recreation\n\
+of the very first hack\n\
+that the public ever\n\
+saw from me.\n\
+\n\
+The original hack was\n\
+submitted to SimpleFlips's\n\
+Nathaniel Bandy Comp.\n\
+and won first place.\n\
+\n\
+I wanted to remake the\n\
+hack because SM64 decomp\n\
+has so many different\n\
+things to learn.\n\
+\n\
+Blender, coding, etc.\n\
+There is just a lot\n\
+and all of it is\n\
+different from 'normal'.\n\
+\n\
+I thought that remaking\n\
+this hack would be a\n\
+nice starting point for\n\
+me to see what I could do.\n\
+\n\
+The original hack means\n\
+a lot to me. Remaking it\n\
+was a struggle.\n\
+I wanted everything to\n\
+be perfect.\n\
+I went for a blend of\n\
+having this hack be both\n\
+authentic to the \n\
+original but also new\n\
+to set it apart.\n\
+I don't know if anyone\n\
+will care about this\n\
+hack, but I hope\n\
+someone will enjoy it.\n\
+\n\
+Shoutouts to SimpleFlips\n\
+and Nathaniel Bandy...\n\
+and have fun!"))
 
-DEFINE_DIALOG(DIALOG_003, 1, 5, 95, 200, _("\
-Thank you, Mario! The Big\n\
-Bob-omb is nothing but a\n\
-big dud now! But the\n\
-battle for the castle has\n\
-just begun.\n\
-Other enemies are holding\n\
-the other Power Stars. If\n\
-you recover more Stars,\n\
-you can open new doors\n\
-that lead to new worlds!\n\
-My Bob-omb Buddies are\n\
-waiting for you. Be sure\n\
-to talk to them--they'll\n\
-set up cannons for you."))
+DEFINE_DIALOG(DIALOG_003, 1, 4, 95, 200, _("\
+★★★★★★★★★★★★\n\
+        Stars: 7\n\
+ (Including 100 coins)\n\
+★★★★★★★★★★★★"))
 
 DEFINE_DIALOG(DIALOG_004, 1, 5, 95, 200, _("\
 Hello, my name is\n\
@@ -252,7 +289,7 @@ why Nathaniel Bandy\n\
 suddenly became a\n\
 pirate?\n\
 Have you ever wondered\n\
-how its always Nathaniel\n\
+how it's always Nathaniel\n\
 Bandy every time?\n\
 \n\
 Mr Flips, I believe that\n\
@@ -633,51 +670,23 @@ Hi! I'll prepare the\n\
 cannon for you!"))
 
 DEFINE_DIALOG(DIALOG_048, 1, 1, 95, 200, _("\
-Shoutouts to Mayro."))
+Shoutouts to NuoKart."))
 
-DEFINE_DIALOG(DIALOG_049, 1, 5, 30, 200, _("\
-Remember that tricky Wall\n\
-Kick jump? It's a\n\
-technique you'll have to\n\
-master in order to reach\n\
-high places.\n\
-Use it to jump from wall\n\
-to wall. Press the\n\
-Control Stick in the\n\
-direction you want to\n\
-bounce to gain momentum.\n\
-Practice makes perfect!"))
+DEFINE_DIALOG(DIALOG_049, 1, 3, 30, 200, _("\
+Watch out! Some walls in\n\
+this world can't be\n\
+Wall Kicked off of!"))
 
-DEFINE_DIALOG(DIALOG_050, 1, 4, 30, 200, _("\
-Hold [Z] to crouch and\n\
-slide down a slope.\n\
-Or press [Z] while in the\n\
-air to Pound the Ground!\n\
-If you stop, crouch, then\n\
-jump, you'll do a\n\
-Backward Somersault!\n\
-Got that?\n\
-There's more. Crouch and\n\
-then jump to do a\n\
-Long Jump! Or crouch and\n\
-walk to...never mind."))
+DEFINE_DIALOG(DIALOG_050, 1, 3, 30, 200, _("\
+Stepping on this platform\n\
+will take you back to\n\
+the hub!"))
 
-DEFINE_DIALOG(DIALOG_051, 1, 6, 30, 200, _("\
-Climbing's easy! When you\n\
-jump at trees, poles or\n\
-pillars, you'll grab them\n\
-automatically. Press [A] to\n\
-jump off backward.\n\
-\n\
-To rotate around the\n\
-object, press Right or\n\
-Left on the Control Stick.\n\
-When you reach the top,\n\
-press Up to do a\n\
-handstand!\n\
-Jump off from the\n\
-handstand for a high,\n\
-stylin' dismount."))
+DEFINE_DIALOG(DIALOG_051, 1, 4, 30, 200, _("\
+Well SimpleFlips, this\n\
+is the place. I wish you\n\
+the best of luck.\n\
+We're counting on you."))
 
 DEFINE_DIALOG(DIALOG_052, 1, 5, 30, 200, _("\
 Stop and press [Z] to\n\
@@ -1727,17 +1736,10 @@ up if you collect the\n\
 That's right, I'm talking\n\
 to you, SimpleFlips."))
 
-DEFINE_DIALOG(DIALOG_142, 1, 5, 150, 200, _("\
-You've recovered three\n\
-Power Stars! Now you can\n\
-open any door with a 3\n\
-on its star.\n\
-\n\
-You can come and go from\n\
-the open courses as you\n\
-please. The enemies ahead\n\
-are even meaner, so be\n\
-careful!"))
+DEFINE_DIALOG(DIALOG_142, 1, 3, 150, 200, _("\
+You have collected all of\n\
+the stars in the hack!\n\
+Nice job!"))
 
 DEFINE_DIALOG(DIALOG_143, 1, 6, 150, 200, _("\
 You've recovered eight of\n\

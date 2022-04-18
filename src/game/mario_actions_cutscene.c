@@ -49,7 +49,7 @@ static s8 sPeachManualBlinkTime = 0;
 static s8 sPeachIsBlinking = FALSE;
 static s8 sPeachBlinkTimes[7] = { 2, 3, 2, 1, 2, 3, 2 };
 
-static u8 sStarsNeededForDialog[] = { 65, 66, 67, 68, 69, 70 };
+static u8 sStarsNeededForDialog[] = { 7, 66, 67, 68, 69, 70 };
 
 /**
  * Data for the jumbo star cutscene. It specifies the flight path after triple
@@ -221,7 +221,7 @@ s32 get_star_collection_dialog(struct MarioState *m) {
             break;
         }
         if (m->prevNumStarsForDialog < numStarsRequired && m->numStars >= numStarsRequired) {
-            dialogID = i + DIALOG_141;
+            dialogID = i + DIALOG_142;
             break;
         }
     }
