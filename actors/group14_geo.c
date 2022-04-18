@@ -17,3 +17,4 @@
 #include "scuttlebug/geo.inc.c"
 #include "paragoomba/geo.inc.c"
 #include "sushi/geo.inc.c"
+#include "piplup/geo.inc.c"

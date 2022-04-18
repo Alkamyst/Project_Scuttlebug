@@ -27,7 +27,7 @@
 #define MAX_NUM_COINS   999
 
 // Air/Breath meter is separate from health meter when underwater
-#define BREATH_METER
+// #define BREATH_METER
 
 // Number of coins to spawn the "100 coin" star. If you remove the define altogether, then there won't be a 100 coin star at all.
 #define X_COIN_STAR 100
@@ -54,7 +54,7 @@
 #define EASIER_DIALOG_TRIGGER
 
 // Show an "A" when Mario is able to talk [requires EASIER_DIALOG_TRIGGER]
-#define DIALOG_INDICATOR
+// #define DIALOG_INDICATOR
 
 // Include the English characters that were missing from US segment2
 // J, Q, V, X, Z, ¨, !, !!, ?, &, %, ., and the beta key.

@@ -327,6 +327,7 @@ const LevelScript script_func_global_15[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SCUTTLEBUG,              scuttlebug_geo),
     LOAD_MODEL_FROM_GEO(MODEL_PARAGOOMBA,              paragoomba_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SUSHI,                   sushi_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_PIPLUP,                  piplup_geo),
     RETURN(),
 };
 

@@ -8,7 +8,7 @@
 #define GFX_POOL_SIZE 10000
 
 // Show a watermark in the title screen that reads "Made with HackerSM64", instead of the copyright message
-#define INTRO_CREDIT
+// #define INTRO_CREDIT
 
 // Spawn floombas in the title screen
 // #define INTRO_FLOOMBAS

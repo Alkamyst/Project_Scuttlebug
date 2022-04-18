@@ -53,3 +53,5 @@ UNUSED static const u64 binid_8 = 8;
 #include "sushi/anims/data.inc.c"
 #include "sushi/anims/table.inc.c"
 UNUSED static const u64 binid_9 = 9;
+#include "piplup/model.inc.c"
+UNUSED static const u64 binid_10 = 10;

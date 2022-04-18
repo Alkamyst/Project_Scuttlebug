@@ -413,6 +413,7 @@
 #define MODEL_WOODEN_POST                 0x6B        // wooden_post_geo
 #define MODEL_PARAGOOMBA                  0x6C        // paragoomba_geo
 #define MODEL_SUSHI                       0x6D        // sushi_geo
+#define MODEL_PIPLUP                      0x6E        // piplup_geo
 
 // group 15
 #define MODEL_MIPS                        0x64        // mips_geo

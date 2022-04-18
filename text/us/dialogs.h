@@ -14,7 +14,7 @@
 
 DEFINE_DIALOG(DIALOG_000, 1, 4, 95, 200, _("\
 Hey Simple, have you\n\
-seen the inside of the\n\
+seen the inside of this\n\
 hull?\n\
 \n\
 Everywhere I look I see\n\
@@ -22,7 +22,7 @@ these HIDEOUS freaks of\n\
 nature!\n\
 \n\
 Apparently, these are \n\
-the Paragoomba Bandy's,\n\
+the Paragoomba Bandys,\n\
 a wild species on the\n\
 brink of extinction.\n\
 Well, I don't care\n\
@@ -77,23 +77,33 @@ to talk to them--they'll\n\
 set up cannons for you."))
 
 DEFINE_DIALOG(DIALOG_004, 1, 5, 95, 200, _("\
+Hello, my name is\n\
+Jet Erikson, but\n\
+I am known as\n\
+Piplup guy.\n\
+\n\
+I shall open the\n\
+cannon for you.\n\
+But first...\n\
+\n\
+\n\
 There were no\n\
 GBJs this hack\n\
 \n\
 Current GBJ\n\
 Drystreak:\n\
-0101001101101000\n\
-0110111101110101\n\
-0111010001101111\n\
-0111010101110100\n\
-0111001100100000\n\
-0111010001101111\n\
-0010000001010011\n\
-0110100101101101\n\
-0111000001101100\n\
-0110010101100110\n\
-0110110001101001\n\
-0111000001110011"))
+0100010001101001\n\
+0110011001100110\n\
+0110010101110010\n\
+0110010101101110\n\
+0111010000100000\n\
+0100100001101001\n\
+0110010001100100\n\
+0110010101101110\n\
+0010000001001101\n\
+0110010101110011\n\
+0111001101100001\n\
+0110011101100101"))
 
 DEFINE_DIALOG(DIALOG_005, 1, 3, 30, 200, _("\
 Hey, Mario! Is it true\n\

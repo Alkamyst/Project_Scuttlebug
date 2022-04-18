@@ -182,4 +182,6 @@ extern const Gfx sushi_seg5_dl_0500A958[];
 extern const Gfx sushi_seg5_dl_0500A990[];
 extern const struct Animation *const sushi_seg5_anims_0500AE54[];
 
+#include "piplup/geo_header.h"
+
 #endif
