@@ -3794,6 +3794,7 @@ const BehaviorScript bhvMessagePanel[] = {
     SET_INT(oWoodenPostTotalMarioAngle, 0),
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),
+        CALL_NATIVE(bhv_wooden_post_update),
         CALL_NATIVE(load_object_collision_model),
         SET_INT(oInteractStatus, INT_STATUS_NONE),
     END_LOOP(),

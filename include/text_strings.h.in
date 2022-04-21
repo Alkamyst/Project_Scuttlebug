@@ -199,7 +199,7 @@
  */
 // Main Screens
 #define TEXT_MARIO _("SIMPLE") // View Score Menu
-#define TEXT_SELECT_FILE _("SELECT FILE")
+#define TEXT_SELECT_FILE _("LUIGIMAN04")
 #define TEXT_CHECK_FILE _("CHECK FILE")
 #define TEXT_COPY_FILE _("COPY FILE")
 #define TEXT_ERASE_FILE _("ERASE FILE")
@@ -247,7 +247,7 @@
 #define TEXT_SURE _("SURE?")
 #define TEXT_YES _("YES")
 #define TEXT_NO _("NO")
-#define TEXT_FILE_MARIO_A_JUST_ERASED _("SIMPLE A JUST ERASED")
+#define TEXT_FILE_MARIO_A_JUST_ERASED _("SIMPLEA JUST ERASED")
 
 /**
  * Menus Text (Pause, Course Completed)

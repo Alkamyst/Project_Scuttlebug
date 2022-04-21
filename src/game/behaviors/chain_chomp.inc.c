@@ -436,40 +436,9 @@ void bhv_wooden_post_update(void) {
     // When ground pounded by mario, drop by -45 + -20
     if (!o->oWoodenPostMarioPounding) {
         if ((o->oWoodenPostMarioPounding = cur_obj_is_mario_ground_pounding_platform())) {
-            cur_obj_play_sound_2(SOUND_GENERAL_POUND_WOOD_POST);
-            o->oWoodenPostSpeedY = -70.0f;
+            obj_explode_and_spawn_coins(46.0f, COIN_TYPE_YELLOW);
+            create_sound_spawner(SOUND_GENERAL_BREAK_BOX);
         }
-    } else if (approach_f32_ptr(&o->oWoodenPostSpeedY, 0.0f, 25.0f)) {
-        // Stay still until mario is done ground pounding
-        o->oWoodenPostMarioPounding = cur_obj_is_mario_ground_pounding_platform();
-    } else if ((o->oWoodenPostOffsetY += o->oWoodenPostSpeedY) < -190.0f) {
-        // Once pounded, if this is the chain chomp's post, release the chain
-        // chomp
-        o->oWoodenPostOffsetY = -190.0f;
-        if (o->parentObj != o) {
-            play_puzzle_jingle();
-            o->parentObj->oChainChompReleaseStatus = CHAIN_CHOMP_RELEASED_TRIGGER_CUTSCENE;
-            o->parentObj = o;
-        }
-    }
-
-    if (o->oWoodenPostOffsetY != 0.0f) {
-        o->oPosY = o->oHomeY + o->oWoodenPostOffsetY;
-    } else if (!GET_BPARAM3(o->oBehParams)) { // Whether the post has coins or not
-        // Reset the timer once mario is far enough
-        if (o->oDistanceToMario > 400.0f) {
-            o->oTimer = o->oWoodenPostTotalMarioAngle = 0;
-        } else {
-            // When mario runs around the post 3 times within 200 frames, spawn
-            // coins
-            o->oWoodenPostTotalMarioAngle += (s16)(o->oAngleToMario - o->oWoodenPostPrevAngleToMario);
-            if (absi(o->oWoodenPostTotalMarioAngle) > 0x30000 && o->oTimer < 200) {
-                obj_spawn_loot_yellow_coins(o, 5, 20.0f);
-                set_object_respawn_info_bits(o, RESPAWN_INFO_TYPE_NORMAL);
-            }
-        }
-
-        o->oWoodenPostPrevAngleToMario = o->oAngleToMario;
     }
 }
 

@@ -1152,20 +1152,7 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
             handle_save_menu(m);
             break;
         case ACT_STATE_EXIT_LAND_SAVE_DIALOG_WITH_CAP:
-            animFrame = set_mario_animation(m, MARIO_ANIM_TAKE_CAP_OFF_THEN_ON);
-            switch (animFrame) {
-                case 12:
-                    cutscene_take_cap_off(m);
-                    break;
-                case 37:
-                // fallthrough
-                case 53:
-                    play_sound(SOUND_ACTION_BRUSH_HAIR, m->marioObj->header.gfx.cameraToObject);
-                    break;
-                case 82:
-                    cutscene_put_cap_on(m);
-                    break;
-            }
+            set_mario_animation(m, MARIO_ANIM_SUMMON_STAR);
             handle_save_menu(m);
             break;
     }
